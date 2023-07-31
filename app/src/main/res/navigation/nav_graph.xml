@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_Fragment">
+
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.example.shoezy.fragments.Home_Fragment"
+        android:label="fragment_home_"
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_home_Fragment_to_cart_Fragment"
+            app:destination="@id/cart_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart_Fragment"
+        android:name="com.example.shoezy.fragments.cart_Fragment"
+        android:label="fragment_cart_"
+        tools:layout="@layout/fragment_cart_" />
+    <fragment
+        android:id="@+id/more_Fragment"
+        android:name="com.example.shoezy.fragments.More_Fragment"
+        android:label="fragment_more_"
+        tools:layout="@layout/fragment_more_" />
+</navigation>
