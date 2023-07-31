@@ -71,5 +71,11 @@ class cart_Fragment : Fragment(),cartAdapter.onClick {
 
     }
 
-
+    override fun deleteFunc(position: Int) {
+        val dao = AppDatabase.getInstance(requireContext()).dao()
+        GlobalScope.launch(Dispatchers.IO) {
+                dao.deleteProduct(ProductModel(list[position].productId,list[position].productName,
+                    list[position].productImage,list[position].productPrice))
+            }
+    }
 }
